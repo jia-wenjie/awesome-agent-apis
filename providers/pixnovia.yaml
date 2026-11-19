@@ -1,1 +1,69 @@
+name: Pixnovia AI Video Generation API
+slug: pixnovia
+homepage: https://pixnovia.com
+docs_url: https://pixnovia.com/api/docs
 
+description: >
+  Pay-per-second AI video generation API powered by MiniMax H3 model.
+  Supports text-to-video and image-to-video generation. 25% cheaper than
+  MiniMax official, $1 free credit, no subscription required.
+
+auth_type: bearer_token
+auth_setup:
+  - Create account at https://pixnovia.com
+  - Navigate to API settings page
+  - Copy your API key
+  - Use in Authorization: Bearer YOUR_API_KEY header
+
+request_format: rest_json
+
+request_sample: |
+  POST https://api.pixnovia.com/v1/video/generate
+  Authorization: Bearer YOUR_API_KEY
+  Content-Type: application/json
+  
+  {
+    "prompt": "A cat dancing on a piano",
+    "resolution": "768p",
+    "duration": 5
+  }
+
+response_sample: |
+  {
+    "video_id": "vid_123456",
+    "status": "processing",
+    "url": "https://videos.pixnovia.com/vid_123456.mp4"
+  }
+
+pricing: |
+  Pay-per-second video generation:
+  - 480p (SD): $0.04/sec
+  - 768p (HD): $0.06/sec ← Most popular
+  - 1080p (FHD): $0.08/sec
+  - 1440p (QHD): $0.10/sec
+  
+  New user bonus: $1 free credit (no credit card)
+  Minimum recharge: $5
+  Credits never expire
+
+capabilities:
+  - text-to-video
+  - image-to-video
+  - multi-reference-input
+
+distinct_value: >
+  25% cheaper than MiniMax official API. No subscription model, pure
+  pay-per-second. Generous free tier ($1 credit). Free multi-reference
+  inputs (image/audio). Self-serve API with instant access.
+
+public_pricing: true
+self_serve: true
+status: active
+
+tags:
+  - video-generation
+  - ai-api
+  - generative-media
+  - minimax
+
+last_updated: 2026-11-19
